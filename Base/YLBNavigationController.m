@@ -7,11 +7,8 @@
 //
 
 #import "YLBNavigationController.h"
-#import "YLBMessageController.h"
 
-@interface YLBNavigationController ()<UINavigationControllerDelegate>
-
-@property (nonatomic, strong)UILabel *countLabel;
+@interface YLBNavigationController ()
 
 @end
 
@@ -24,19 +21,7 @@
 //    self.navigationBar.barTintColor = [UIColor whiteColor];
     self.navigationBar.translucent = YES;
     [self.navigationBar setShadowImage:[UIImage new]];
-    self.delegate = self;
-
-    self.countLabel = [UILabel labelWithTitle:@"0" fontSize:10 textColor:[UIColor whiteColor] textWeight:UIFontWeightLight];
-    self.countLabel.backgroundColor = [UIColor redColor];
-    [self.navigationBar addSubview:self.countLabel];
-    [self.navigationBar bringSubviewToFront:self.countLabel];
-    self.countLabel.size = CGSizeMake(20, 20);
-    self.countLabel.textAlignment = NSTextAlignmentCenter;
-    self.countLabel.layer.cornerRadius = 10;
-    self.countLabel.layer.masksToBounds = YES;
-    self.countLabel.rightTop = CGPointMake(self.navigationBar.width-6, 1);
     
-    self.countLabel.hidden = [UIApplication sharedApplication].applicationIconBadgeNumber <= 0?YES:NO;
 }
 
 
@@ -59,25 +44,12 @@
         viewController.hidesBottomBarWhenPushed = true;
     }
     
-    self.countLabel.hidden = YES;
-    
     [super pushViewController:viewController animated:animated];
 }
 
 
 -(void)backAction{
     [self popViewControllerAnimated:YES];
-}
-
-- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
-    if(navigationController.viewControllers.count == 1 && ![viewController isKindOfClass:[YLBMessageController class]]){
-        NSInteger count = [UIApplication sharedApplication].applicationIconBadgeNumber;
-        self.countLabel.text = [NSString stringWithFormat:@"%ld", count];
-        
-        self.countLabel.hidden = count<=0?YES:NO;
-    }else{
-        self.countLabel.hidden = YES;
-    }
 }
 
 /*
