@@ -36,7 +36,7 @@
     {
         UIButton *leftItem = [[UIButton alloc] init];
         [leftItem setImage:[UIImage imageNamed:@"backIcon"] forState:UIControlStateNormal];
-        leftItem.size = CGSizeMake(60, 44);
+        leftItem.frame = CGRectMake(0, 0, 60, 44);
         leftItem.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 40);
         [leftItem addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
         UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:leftItem];

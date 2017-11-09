@@ -13,6 +13,9 @@
 		8D1E3FA11FB3159500CBDE63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D1E3FA01FB3159500CBDE63 /* Assets.xcassets */; };
 		8D1E3FA41FB3159500CBDE63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D1E3FA21FB3159500CBDE63 /* LaunchScreen.storyboard */; };
 		8D1E3FA71FB3159500CBDE63 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1E3FA61FB3159500CBDE63 /* main.m */; };
+		8D95FB931FB3EB8500342702 /* YLBBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1E3FAF1FB315C600CBDE63 /* YLBBaseController.m */; };
+		8D95FB941FB3EB8500342702 /* YLBBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1E3FB11FB315C600CBDE63 /* YLBBaseModel.m */; };
+		8D95FB951FB3EB8500342702 /* YLBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1E3FB31FB315C600CBDE63 /* YLBNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -162,6 +165,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D95FB931FB3EB8500342702 /* YLBBaseController.m in Sources */,
+				8D95FB941FB3EB8500342702 /* YLBBaseModel.m in Sources */,
+				8D95FB951FB3EB8500342702 /* YLBNavigationController.m in Sources */,
 				8D1E3F9C1FB3159500CBDE63 /* ViewController.m in Sources */,
 				8D1E3FA71FB3159500CBDE63 /* main.m in Sources */,
 				8D1E3F991FB3159500CBDE63 /* AppDelegate.m in Sources */,
